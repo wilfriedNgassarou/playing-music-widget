@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { MusicPlayerLegend } from "./components/music-player-legend";
 import { DiskCenter } from "./components/disc-center";
 import { DiskFill } from "./components/disc-fill";
+import { Credits } from "./components/credits";
 
 function App() {
   const [playingTime, setPlayingTime] = useState(0);
@@ -22,6 +23,7 @@ function App() {
   return (
     <MotionConfig transition={{ type: 'tween', ease: 'easeOut', duration: .4 }}>
       <section className="w-full h-dvh flex justify-center items-center bg-white">
+        <Credits />
         <div 
           style={{ 
             boxShadow: `
