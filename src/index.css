@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Source Code Pro", serif;
+}
+
+.animation-play {
+  animation: Play ease-in-out .4s infinite alternate;
+}
+
+@keyframes Play {
+  0% { transform: scaleY(1); }
+  100% { transform: scaleY(0.3); }
+}
+
+.animation-fill {
+  /* --duration: 10s; */
+
+  transform-origin: left;
+  animation: Fill linear var(--duration) both;
+}
+
+@keyframes Fill {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.animation-rotate {
+  animation: Rotate linear 6s infinite;
+}
+
+@keyframes Rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
